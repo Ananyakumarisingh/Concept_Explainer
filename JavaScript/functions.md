@@ -32,7 +32,7 @@ When you store a function inside of a veriable it is called function expression.
 
 __`Anonymous function`__ `is a function which has no name and it can be assigned to a variable or can be passed as a *callback function.`
 
-__`Callback function`__ `is a function which has no name and it can be assigned to a variable or can be passed as a *callback.`
+__`Callback function`__ `is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.`
 
 ### 3. What is __First class__ functions?
 In a language where a function can be treated like a veriable there functions are called first class functions. In these cases function can be passed into another functions and can be used, manipulated, returned from those, and basically everything that a variable can do a function can also do.
@@ -150,9 +150,118 @@ __Params__ - The variable accepted by the function at the time of declaration is
 __Arguments__ - The values passed at the time of calling or invoking the function are called __argumnets__.
 
 
-    function square(num) {              // params
+    function square(num) {                  // Params
         console.log(num * num);
     };
 
-    square(5);                  // arguments
+    square(5);                       // Arguments
 
+
+### 7. Spread VS Rest Operators?
+__Spread Operators -__
+
+__Rest Operators -__
+
+    
+    1.  function multiply(...num) {                 // Rest Operator
+            console.log(num[0] * num[1]);
+        };
+        var arr = [5, 6];   
+
+        multiply(...arr)                    // Spread Operator
+
+
+    2.  const fn = (a, ...num, x, y) {
+            console.log(x,y);                   // Error: Rest parameter must be last formal parameter
+        }
+
+        fn(5, 6, 3, 7);
+
+    Rest operator should always be in the last, as it takes all the numbers which is rest or not assigned to any value. So,  ==>
+        const fn = (a, x, y, ...num) {
+            console.log(x, y);                    // 3 5 
+            console.log(num);                    // [9, 7, 11]
+        }
+
+        fn(5, 6, 3, 5, 9, 7, 11);
+
+
+### 8. Callback function?
+A __callback function__ is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.
+
+    function greeting(name) {
+        alert(`Hello, ${name}`);
+    }
+
+    function processUserInput(callback) {
+        const name = prompt("Please enter your name.");
+        callback(name);
+    }
+
+    processUserInput(greeting);
+
+`Example -` setTimeout(), map, filter, reduce, EventListener(),
+
+### 9. Arrow function?
+__Arrow functions__ were introduced in ES6 version of JS and they were similar to a normal function but in some ways they work differently.
+
+    // Normal function --
+    const add = function (firstNum, scndNum) {
+        return firstNum + scndNum;
+    };
+    
+    // Arrow function --
+    const add = (firstNum, scndNum) => {
+        return firstNum + scndNum;
+    };
+
+    or,
+    const add = (firstNum, scndNum) => firstNum + scndNum;
+### 10. Arrow function VS Normal function?
+1. Syntax -
+
+        // Normal function --
+        function square(num) {
+            return num * num;
+        };
+        
+        // Arrow function --
+        const square = (num) => {
+            return num * num;
+        };
+
+2. Implicit 'return' keyword - 
+
+    In arrow function we can get rid of the arrow function if this is a one liner.
+    const add = (firstNum, scndNum) => firstNum + scndNum;
+
+3. Arguments - 
+
+        // Normal function --
+        function fn() {
+            console.log(arguments);             // [1, 2, 3];
+        };
+        fn(1, 2, 3);
+
+
+        // Arrow function --
+        const fn = () => {
+            console.log(arguments);             // Error: arguments is not defined
+        };
+        fn(1, 2, 3);
+
+4. 'this' keyword -
+
+        let user = {
+            username = 'Ananya'
+            rc1: () => {
+                console.log('I am ' + this.username);             // I am undefined.    --> Here this is pointing to the global object
+            };
+
+            rc1() {
+                console.log('I am ' + this.username);             // I am Ananya.    --> Here this is pointing to the user object. So, it prints the value of username.
+            };
+        };
+
+        user.rc1();
+        user.rc2();
