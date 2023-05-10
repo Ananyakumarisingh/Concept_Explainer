@@ -265,3 +265,24 @@ __Arrow functions__ were introduced in ES6 version of JS and they were similar t
 
         user.rc1();
         user.rc2();
+
+
+## _SOME IMPORATNT QUESTIONS --_
+
+    1.  var func1 = function func2() {
+            console.log('clg');
+        };
+
+        func1();                // clg
+        func2();                 // Error: func2 is not defined
+
+    2.  func1()
+        func2();
+
+        function func1() {
+            console.log('clg1');        // clg1
+        }
+
+        var func2 = function() {
+            console.log('clg2');          // func2 is not a function
+        }

@@ -194,3 +194,24 @@ __reduce__ method reduces the array of values down to just one value. It takes t
 
           <!-- console.log(marks); -->
           console.log(totalmarks)
+
+
+## ___SOME IMPORATNT QUESTIONS___ ----
+
+    1.  var arr = [1,2,3,4,5];
+        console.log(arr.filter());          // Error: undefined not a function
+
+    2.  var arr = [0,2,1,0];
+        console.log(arr.filter(function(el){          //  [2, 1]  :- will return only the true value if not then []
+            return el;
+        }));
+
+    3.  var arr = ["Ananya", 'Annu', "Bhupender", "Soni", 'Singh'];
+        var newArr = arr.map(function(el){
+            if(el[0] == 'A') return el
+        })
+        console.log(newArr);                                //  [ 'Ananya', 'Annu', undefined, undefined, undefined ]
+
+    4.  var num = [1,6,7,8,9];
+        var out  =  num.map((el, ind) => ind%2==0);
+        console.log(out)                                   // [ true, false, true, false, true ]

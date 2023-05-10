@@ -102,3 +102,47 @@ During the creation phase JS moves the `variable` and `function` declaration to 
 _`Note - In hoisting var doesn't gives any warning just shows undefined. Unlike var, let and const are also hosted but gives a warning "Can't access 'count' before initialisation"`_
 
 * __Temporal Dead Zone__ is the time b/w the declaration and initialisation of let and const variables. It is a term to describe the state where variables are in the scope but they are not yet decleared.
+
+## _SOME IMPORATNT QUESTIONS --_
+
+    1.  var a = 10;
+        let b = 10;
+        var c = true;
+
+        if(c) {
+          var a = 20;
+          let b = 20;                   // let will only be updated when it is in the globle scope
+          console.log(b);               // 20  
+        }
+
+        console.log(a);               // 20
+        console.log(b);               // 10  
+
+    2.  var arr = [1];
+        arr.reduce((a,b) => {
+          console.log(a);                   // it will not print anything in the console
+          console.log(b);                   // it will not print anything in the console
+        });
+
+    3.  var arr = [null, 1, 5, undefined];
+        let newArr =  arr.reduce(function(el) {
+          return el
+        });
+
+        console.log(newArr);                     // null
+
+    or if,  var arr = [null, 1, 5, undefined];
+            let newArr =  arr.reduce(function(el) {
+              return el != undefined
+            });
+
+            console.log(newArr);                    // true
+
+    4.  function get () {
+        var a = b = 20;
+        }
+
+        get();
+
+        console.log(b);         // 26
+        console.log(a);         // a is not defined
