@@ -28,3 +28,17 @@
 
 // Person()
 
+// var func1 = function func2() {
+//     console.log("clg");
+// }
+
+// func1();
+// func2();
+
+var arr = ["Aman", "Ankush", "Nru", "Char", "Al"];
+
+var newArr = arr.map(function(el) {
+    if (el[0] === "A")   return el;
+});
+
+console.log(newArr)
