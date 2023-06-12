@@ -16,29 +16,26 @@
 // })()();
 
 
-// const sum = new Function('a', 'b', 'return a + b');
-// console.log(sum(2, 6));
-// const num = [1,2,3,4,5,6,8];
-// const max = Math.max.apply(null, num);
-// console.log(max)
 
-// function Person () {
-//   console.log(this)
-// }
-
-// Person()
-
-// var func1 = function func2() {
-//     console.log("clg");
-// }
-
-// func1();
+// func1()
 // func2();
 
-var arr = ["Aman", "Ankush", "Nru", "Char", "Al"];
+// function func1() {
+//     console.log("clg1");
+// }
 
-var newArr = arr.map(function(el) {
-    if (el[0] === "A")   return el;
-});
+// var func2 = function () {
+//     console.log("clg2");
+// }
 
-console.log(newArr)
+
+// var arr = [1, 2, 3, 4, 5, 6];
+
+// var out = arr.filter(function(el) {
+//     return el % 3 === 0;
+// }).reduce(function(acc, ele) {
+//     return acc + ele ** 3
+// }, 1);
+
+// console.log(out);
+
