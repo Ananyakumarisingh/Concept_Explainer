@@ -1,4 +1,4 @@
-# _SD_
+# __SD__
 
 ## <a href="https://rust-fire-2df.notion.site/9-1-System-Design-Intro-5ec69020edf1477b9700da307e9788ee"><b><u>System Design Intro (With micro services)</u></b></a>
 
@@ -60,7 +60,7 @@ __Latency numbers every programmer should know__
 | Read 1 MB sequentially from SSD* |	1,000,000 |	1 |
 | Disk seek |	10,000,000 |	10 |
 | Read 1 MB sequentially from disk |	20,000,000 |	20 |
-| Send packet CA->Netherlands->CA |	150,000,000	| 150 |
+| Send packet CA -> Netherlands -> CA  |	150,000,000	| 150 |
 
 
 - __Throughput__
