@@ -334,7 +334,6 @@ __Resources__ <a href="https://github.com/prasadgujar/low-level-design-primer">O
 
 
 ## Notion LLD PSC
-
 - __<a href="https://wealthy-fir-ede.notion.site/Design-Patterns-983811ad2db34db996da95c010678c7c">Link 1</a>__
 
 - __<a href="https://wealthy-fir-ede.notion.site/LLD-for-a-Parking-Lot-afceebdee5e84d9e89267f0703a53f71">Link 2</a>__
