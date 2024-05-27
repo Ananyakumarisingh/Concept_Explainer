@@ -119,6 +119,21 @@ destructuring to extract these properties from each object.
 
 35. Write a statement that declares a variable str and assign a string value to it also write an expression that uses the map() method to return a new array containing the ASC|| code for each character in string variable
 
+        let str = "Hello, World!";
+        let asciiCodes = Array.from(str).map((char) => char.charCodeAt(0));
+
+        console.log(asciiCodes);
+In the code snippet above, we first declare the variable str and assign it the value "Hello, World!".
+
+We then use the Array.from() method to convert the string str into an array of individual characters. This allows us to apply the map() method to iterate over each character.
+
+Within the map() method, we use an arrow function (char) => char.charCodeAt(0) to retrieve the ASCII code for each character. The char.charCodeAt(0) function returns the ASCII code for the character at index 0.
+
+The map() method applies this arrow function to each character in the array, resulting in a new array called asciiCodes that contains the ASCII codes for each character in the original string.
+
+Finally, we log the asciiCodes array to the console, which will display an array of ASCII codes corresponding to the characters in the str variable.
+
+
 
 36. Advantage of using express.
 
@@ -170,3 +185,94 @@ destructuring to extract these properties from each object.
 
 
 50. Write a function to validate a user's credentails against a mongoDB collection of user, using the library 'bcrypt'
+
+## 1.  What is non-blocking vs blocking?
+## 2. What is throughput?
+## 3. what is the difference between readFile and readFileSync
+## 4. How can you make a network request using http module?
+## 5. How to create a web server without express?
+## 6. What is libuv?
+## 7. What are the different phases involved in event loop?
+## • The Node.js Event Loop, Timers, and process.nextTick()
+## • Don't Block the Event Loop (or the Worker Pool)
+## 8. What are timers in Node.js?
+## 9. What is NVM? how do you use it?
+## 10. What is common.js? how is it different from es modules?
+## 11. How does the crypto module work?
+## 12. What are web sockets?
+## 13. What are microservices?
+## 14. Creating a CLI based app using Node.js and publish it
+## 15. How does express work?
+## 16. What are routes?
+## 17. What are Middlewares?
+## 18. What is MVC framework?
+## 19. How do you do validations?
+## 20. How do you do static routing?
+## 21. What are some templating engines?
+## 22. How do you manage sessions in express?
+## 23. How do you manage cookies with express?
+## 24. What are common libraries you work with express?
+## 25. What is CORS?
+## 26. What is testing?
+## 27. What is unit testing?
+## 28. What is functional testing?
+## 29. What is HTTPS? what is the difference between HTTP and HTTPS?
+## 30. What is SSL/TLS?
+## 31. What is OWASP?
+## 32. What is the difference between SQL and NoSQL databases?
+## 33. What are some common queries in SQL?
+## 34. How do you do joins in SQL?
+## 35. How do you use lookup in mongodb?
+## 36. What is CAP theorem?
+## 37. What is indexing?
+## 38. What is DB replication?
+## 39. What is PACELC?
+## 40. What is Normalization / Denormalization?
+## 41. What is Entity Relationship Model? ( ER Model )
+# Nodejs
+## 1. What are Models?
+## 2. Explain why mongoose does not return a promise but has a .then
+## 3. What are aggregation pipelines with mongoose?
+## 4. I'm using an arrow function for a virtual, middleware, getter/setter, or method and the value of this is wrong. Why?
+## 5. Should I create/destroy a new connection for each database operation?
+## 6. My query/update seems to execute twice. Why is this happening?
+## 7. How do you create indexes with mongoose
+## 8. What are pre and post hooks?
+## 9. What is Authentication?
+## 10. What is Authorization?
+## 11. How do you do role-based authentication?
+## 12. What is hashing?
+## 13. What is encryption?
+## 14. How is hashing and encryption different?
+## 15. What is salt?
+## 16. What is JWT?
+## 17. How is JWT different and list the pros and cons of using JWT tokens?
+## 18. What are the different ways to manage authentication?
+## 19. What is cookie-based auth?
+## 20. What is session management?
+## 21. What is OAuth
+## 22. What is REST api?
+## 23. What is gRPC?
+## 24. What is GraphQL?
+## 25. What is HTTP
+## 26. What is a web socket?
+## 27. What is Caching?
+## 28. What are ways to cache on the backend?
+## 29. What is LRU cache?
+## 30. What is Redis? Why do we use it?
+## 31. How can we implement caching on frontend?
+## 32. What is a CDN?
+## 33. What is DNS?
+## 34. How does the internet work?
+## 35. How do Browsers work?
+## 36. What is a stateless backend?
+## 37. What is the client server model?
+## 38. What is HTTP vs HTTPS?
+## 40. What is availability?
+## 41. What is latency?
+## 42. What is rate-limiting?
+## 43. What are the different ways to do rate limits?
+## 44. What is a load balancer?
+## 45. Describe how you design an API?
+## 46. What is a horizontal and vertical scaling?
+## 47. How do you build a system which is reliable?
